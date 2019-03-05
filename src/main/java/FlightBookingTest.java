@@ -83,7 +83,7 @@ public class FlightBookingTest {
             System.setProperty("webdriver.chrome.driver", "chromedriver");
         }
         if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\resources\\chromedriver.exe");
             driver=new ChromeDriver();
         }
         if (PlatformUtil.isLinux()) {
