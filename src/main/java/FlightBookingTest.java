@@ -20,7 +20,7 @@ public class FlightBookingTest {
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
 
-        setDriverPath("windows");
+        setDriverPath();
         driver.get("https://www.cleartrip.com/");
         waitFor(2000);
         driver.findElement(By.id("OneWay")).click();
@@ -78,7 +78,7 @@ public class FlightBookingTest {
         }
     }
 
-    private void setDriverPath(String arg1) {
+    private void setDriverPath() {
         if (PlatformUtil.isMac()) {
             System.setProperty("webdriver.chrome.driver", "chromedriver");
         }
